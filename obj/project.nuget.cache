@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sqbkW5tyoeM8uDfHsTOOZChwirLq7bIcVGCC6Wp52XLW+/AxBFPFbggaRP8yoMzA1VVircwBAoNmYglFgDQw4Q==",
+  "dgSpecHash": "eM112xrUG10dB6LcccJJ90422oCUROl3eBTv42OBiV8j8rNpY3ZgB6uWhnB/BmKDZjUk2vMkDwS/q11Ka5Ai+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

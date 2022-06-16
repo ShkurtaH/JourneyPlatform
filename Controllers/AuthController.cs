@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using JourneyPlatform.Repositories;
+using JourneyPlatform.DataTransferObjects;
+using JourneyPlatform.Models;
 namespace JourneyPlatform.Controllers
 {
     [Route("api")]
@@ -13,10 +15,16 @@ namespace JourneyPlatform.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register()
+        public IActionResult Register(RegisterDto dto)
         {
-
-            return Ok("success");
+            var user = new User
+            {
+                Name = dto.Name,
+                Email = dto.Email,
+                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
+            };
+            
+            return Created("success", _repository.Create(user));
         }
     }
 }
