@@ -58,3 +58,5 @@ C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\obj\Debug\net6.0\refint
 C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\obj\Debug\net6.0\JourneyPlatform.pdb
 C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\obj\Debug\net6.0\JourneyPlatform.genruntimeconfig.cache
 C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\obj\Debug\net6.0\ref\JourneyPlatform.dll
+C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\hp\source\repos\JourneyPlatform\JourneyPlatform\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

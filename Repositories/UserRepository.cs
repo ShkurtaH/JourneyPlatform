@@ -17,6 +17,16 @@ namespace JourneyPlatform.Repositories
 
             return user;
         }
+
+        public User GetByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(u => u.Email == email);
+        }
+
+        public User GetById(int id)
+        {
+            return _context.Users.FirstOrDefault(u => u.Id == id);
+        }
     }
 
 }

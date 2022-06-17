@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using JourneyPlatform.Repositories;
+using JourneyPlatform.Helpers;
 using JourneyPlatform.Data;
 
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<JwtService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,6 +36,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(options =>
+{
+    options
+    //.WithOrigins(new[] {"http://localhost:3000", "http://localhost:8080"})
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+    //.AllowCredentials();
+});
 
 app.UseAuthorization();
 
