@@ -6,7 +6,6 @@ using JourneyPlatform.Repositories;
 using JourneyPlatform.Helpers;
 namespace JourneyPlatform.Controllers
 {
-    [Route("api")]
     [ApiController]
     public class AuthController : Controller
     {
@@ -30,6 +29,7 @@ namespace JourneyPlatform.Controllers
             };
             return Created("success", _repository.Create(user));
         }
+
         [HttpPost("login")]
         public IActionResult Login(LoginDto dto)
         {
