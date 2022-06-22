@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5C2BZVVpfDMnkpbKYYjt4exN+WHrdqSSJSYJpnkTJf1Os2z6W0t0Z8DX176WzBGZDgmrqEU4hfHAfKfcgemjTw==",
+  "dgSpecHash": "jyOLEN9b7EMXU3VtvNKnWTdd0qjLmq75I8YNfN+goT9wQ/hkSRX8v1kH03uxAg3FBFPwVz6Eix9yAEAykUFBnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,6 @@
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.0\\microsoft.entityframeworkcore.design.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.0\\microsoft.entityframeworkcore.relational.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.0\\microsoft.entityframeworkcore.sqlserver.6.0.0.nupkg.sha512",
-    "C:\\Users\\hp\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.0\\microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",

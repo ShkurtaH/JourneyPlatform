@@ -10,10 +10,11 @@ namespace JourneyPlatform.Data
 
         }
         public DbSet<User> Users { set; get; }
+        public DbSet<News> News { set; get; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity => { entity.HasIndex(e => e.Email).IsUnique(); });
-        }
+        }*/
     }
 }

@@ -17,16 +17,17 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<JwtService>();
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<JwtService>();
+
 builder.Services.AddSwaggerGen();
 
- 
 
 
 var app = builder.Build();
@@ -37,13 +38,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 
- app.UseRouting();
-
-//app.UseCors("corsapp");
-app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(options => {options .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();});
 
 app.UseAuthorization();
 

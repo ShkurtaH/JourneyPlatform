@@ -4,10 +4,10 @@ namespace JourneyPlatform.Models
 {
     public class News
     {
-        public int NewsId { get; set; }
-        public string NewsTitle { get; set; }
-        public string NewsDescription { get; set; }
-        public string NewsCategory { get; set; }
-        public string DateOfPosting { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        public string Date { get; set; }
     }
 }

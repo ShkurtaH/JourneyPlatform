@@ -6,6 +6,7 @@ using JourneyPlatform.Repositories;
 using JourneyPlatform.Helpers;
 namespace JourneyPlatform.Controllers
 {
+    [Route("api")]
     [ApiController]
     public class AuthController : Controller
     {
