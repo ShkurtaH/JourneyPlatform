@@ -15,6 +15,6 @@ namespace JourneyPlatform.Data
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity => { entity.HasIndex(e => e.Email).IsUnique(); });
-        }*/
+        }*/ 
     }
 }

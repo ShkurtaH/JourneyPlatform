@@ -6,9 +6,8 @@
     "\\DataTransferObjects",
     "\\Helpers",
     "\\Migrations",
-    "\\Models",
-    "\\Repositories"
+    "\\Models"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\Controllers\\NewsController.cs",
   "PreviewInSolutionExplorer": false
 }

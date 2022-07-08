@@ -1,4 +1,3 @@
-
 import { useEffect, useState, map } from "react";
 import { Button, ButtonGroup, Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
@@ -17,14 +16,12 @@ export default function Login() {
     }
     const loginData = async(e) => {
         e.preventDefault();
-
         const response = await fetch('https://localhost:7056/api/login', {
             method: 'POST',
             headers: { 
               'Accept':'application/json',
               'Content-Type':'application/json'
               },
-            credentials: 'include',
             body: JSON.stringify(data)
           });
           const content = await response.json();
@@ -42,11 +39,9 @@ export default function Login() {
     if(navigate){
         return '<h1>test</h1>'
       }
-
     return (
         <div className="bg-white admin-auth">
             <Container>
-            
                 <Row className="justify-content-center">
                     <Col xl={5}>
                         <Form onSubmit={loginData}>
