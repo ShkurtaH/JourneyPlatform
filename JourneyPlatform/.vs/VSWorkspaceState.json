@@ -1,12 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bin",
     "\\Controllers",
     "\\Data",
     "\\DataTransferObjects",
     "\\Helpers",
     "\\Migrations",
-    "\\Models"
+    "\\Models",
+    "\\Repositories"
   ],
   "SelectedNode": "\\Controllers\\NewsController.cs",
   "PreviewInSolutionExplorer": false

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6KTIvz1ks0N/A0fJiq31hfcSz2jXnL50MgSmmskwIxWTZEftkGJcxM6doE2H5kuEMiMgkpdUwI7kN+p+NPQPDw==",
+  "dgSpecHash": "H3HEI1YXAAgi7OO9/5NHR/oGKSKBGf61He/CB8/qLU7N74ZYPmC9YIKKcZEXBNaP226k0K0lzRe7A2VzcJzsrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj",
   "expectedPackageFiles": [
@@ -79,16 +79,6 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "JourneyPlatform depends on Microsoft.AspNetCore.Authentication.JwtBearer (>= 6.0.5-preview.5.22303.8) but Microsoft.AspNetCore.Authentication.JwtBearer 6.0.5-preview.5.22303.8 was not found. An approximate best match of Microsoft.AspNetCore.Authentication.JwtBearer 6.0.5 was resolved.",
-      "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
     {
       "code": "NU1603",
       "level": "Warning",

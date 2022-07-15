@@ -8,7 +8,7 @@ namespace JourneyPlatform.Helpers
 {
     public class JwtService
     {
-        private string secureKey = "this is a very secure key";
+        private string secureKey = "This is a very secure key";
         public string Generate(int id)
         {
             // Standard security data

@@ -9,6 +9,7 @@ namespace JourneyPlatform.Data
         {
 
         }
+        public DbSet<Roles> Roles { set; get;}
         public DbSet<User> Users { set; get; }
         public DbSet<News> News { set; get; }
 

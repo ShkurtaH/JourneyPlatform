@@ -4,6 +4,7 @@ using JourneyPlatform.Models;
 using Microsoft.AspNetCore.Mvc;
 using JourneyPlatform.Repositories;
 using JourneyPlatform.Helpers;
+using BCrypt.Net;
 namespace JourneyPlatform.Controllers
 {
     [Route("api")]
