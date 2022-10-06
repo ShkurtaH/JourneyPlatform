@@ -15,6 +15,10 @@ import PlacesDetail from './components/places-to-stay/PlacesDetail';
 import Login from './components/admin/login/Login';
 import Register from './components/register/Register';
 import Dashboard from './components/admin/dashboard/Dashboard';
+import WildernessOverview from './components/wilderness/WildernessOverview';
+import SkiingOverview from './components/skiing/SkiingOverview';
+import CampingOverview from './components/camping/CampingOverview';
+import NavigationList from './components/admin/dashboard/navigation/NavigationList';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -26,11 +30,15 @@ root.render(
       <Route path="/places-to-stay/list/detail" element={<PlacesDetail />} />
       <Route path="/get-to-know-the-county" element={<GetToKnowTheCounty />} />
       <Route path="/news" element={<NewsOverview />} />
+      <Route path="/wilderness" element= {<WildernessOverview/>}/>
+      <Route path="/skiing" element={<SkiingOverview/>}/>
+      <Route path="/camping" element={<CampingOverview/>}/>
       <Route path="/get-to-know-the-county/:userId" element={<GetToKnowTheCountyDetail />} />
       <Route path="/suitcase" element={<Suitcase />} />
       <Route path="/register" element={<Register/>}/>
       <Route path="/admin" element={<Login />} />
       <Route path="/admin/dashboard" element={<Dashboard />} />
+      <Route path="/navigation" element={<NavigationList/>}/>
     </Routes>
   </BrowserRouter>
 );

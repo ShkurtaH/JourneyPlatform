@@ -1,13 +1,15 @@
 
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
-namespace RestaurantManagementSystem.Models
+namespace JourneyPlatform.Models
 {
-    public class Roles
+   public class Roles
     {
         [Key]
-        public int Id { get; set; }
-        public string Name { get; set; }
-
+        public int RoleId { get; set; }
+        public string RoleName { get; set; } = string.Empty;
+        
     }
 }

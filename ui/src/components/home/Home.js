@@ -6,6 +6,7 @@ import News from "../news/News";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 
+
 function Home() {
     return (
 
@@ -61,7 +62,7 @@ function Home() {
                             <Card>
                                 <Link to="/camping" className="card-link">
                                     <Figure className="card-img">
-                                        <Card.Img variant="top" src="../../../assets/images/general/camping-cat.jpeg" alt="Wilderness" />
+                                        <Card.Img variant="top" src="../../../assets/images/general/camping-cat.jpeg" alt="Camping" />
                                         <Card.Body>
                                             <Card.Text>
                                                 Camping
@@ -75,7 +76,7 @@ function Home() {
                             <Card>
                                 <Link to="/countries" className="card-link">
                                     <Figure className="card-img">
-                                        <Card.Img variant="top" src="../../../assets/images/general/places.jpeg" alt="Wilderness" />
+                                        <Card.Img variant="top" src="../../../assets/images/general/places.jpeg" alt="Countries" />
                                         <Card.Body>
                                             <Card.Text>
                                                 Countries
@@ -89,7 +90,7 @@ function Home() {
                             <Card>
                                 <Link to="/beaches" className="card-link">
                                     <Figure className="card-img">
-                                        <Card.Img variant="top" src="../../../assets/images/general/beaches.jpeg" alt="Wilderness" />
+                                        <Card.Img variant="top" src="../../../assets/images/general/beaches.jpeg" alt="Beaches" />
                                         <Card.Body>
                                             <Card.Text>
                                                 Beaches
@@ -113,7 +114,7 @@ function Home() {
                                 <p>You can always find the perfect place to lay your head for the night in Hamburg. With an impressive variety and price range
                                     to fit every budget you can see everything this natural has to offer during the day... and sleep warm and cozy the whole night through.
                                 </p>
-                                <Link to="/where-to-stay" className="main-btn">Learn more</Link>
+                                <Link to="/places-to-stay" className="main-btn">Learn more</Link>
                             </Col>
                         </Row>
 

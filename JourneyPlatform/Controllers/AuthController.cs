@@ -1,10 +1,11 @@
-﻿using JourneyPlatform.Data;
+﻿//using JourneyPlatform.Data;
 using JourneyPlatform.DataTransferObjects;
 using JourneyPlatform.Models;
 using Microsoft.AspNetCore.Mvc;
 using JourneyPlatform.Repositories;
 using JourneyPlatform.Helpers;
 using BCrypt.Net;
+using JourneyPlatform;
 namespace JourneyPlatform.Controllers
 {
     [Route("api")]
@@ -29,7 +30,8 @@ namespace JourneyPlatform.Controllers
                 Email = dto.Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
             };
-            return Created("success", _repository.Create(user));
+            var b =_repository.Create(user);
+            return Ok(b);
         }
 
         [HttpPost("login")]
@@ -50,12 +52,12 @@ namespace JourneyPlatform.Controllers
                 HttpOnly = true
             });
 
-
-            return Ok(new 
+            return Ok(jwt);
+           /* return Ok(new 
             {
                 message = "success"
             });
-
+           */
         }
          [HttpGet("user")]
         public IActionResult User()
