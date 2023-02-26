@@ -1,26 +1,30 @@
-global using Microsoft.EntityFrameworkCore;
-global using JourneyPlatform.Data; 
-using JourneyPlatform.Repositories;
-using JourneyPlatform.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using System.Text;
 using JourneyPlatform.Auth;
+using JourneyPlatform.Data;
 
-var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
+
+// Add services to the container.
 
 // For Entity Framework
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+// For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-   .AddEntityFrameworkStores<DataContext>()
+    .AddEntityFrameworkStores<DataContext>()
     .AddDefaultTokenProviders();
 
+// Adding Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -43,27 +47,23 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Add services to the container.
-builder.Services.AddCors();
-builder.Services.AddControllers();
-
-// about configuring Swagger/OpenAPI 
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddHttpContextAccessor();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy  =>
+                      policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000")
-                            .AllowAnyMethod()
-                            .AllowAnyHeader();
+                          policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
                       });
 });
+builder.Services.AddControllers();
 
 
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+
+//builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(options => {
     options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
     {
@@ -76,7 +76,6 @@ builder.Services.AddSwaggerGen(options => {
     options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -85,17 +84,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseHttpsRedirection();
-
 app.UseCors(MyAllowSpecificOrigins);
-app.UseCors(options => {options 
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader();});
-
-app.UseAuthorization();
-
+// Authentication & Authorization
 app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

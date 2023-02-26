@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj": {}
+    "D:\\source\\repos\\JourneyPlatform1\\JourneyPlatform\\JourneyPlatform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj": {
+    "D:\\source\\repos\\JourneyPlatform1\\JourneyPlatform\\JourneyPlatform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj",
+        "projectUniqueName": "D:\\source\\repos\\JourneyPlatform1\\JourneyPlatform\\JourneyPlatform.csproj",
         "projectName": "JourneyPlatform",
-        "projectPath": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\JourneyPlatform.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\source\\repos\\JourneyPlatform\\JourneyPlatform\\obj\\",
+        "projectPath": "D:\\source\\repos\\JourneyPlatform1\\JourneyPlatform\\JourneyPlatform.csproj",
+        "packagesPath": "C:\\Users\\shkur\\.nuget\\packages\\",
+        "outputPath": "D:\\source\\repos\\JourneyPlatform1\\JourneyPlatform\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files2022\\Visual_Studio_Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shkur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -115,7 +120,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -127,7 +133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

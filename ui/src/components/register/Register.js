@@ -1,60 +1,84 @@
 import { Button, ButtonGroup, Col, Container, Form, Row } from "react-bootstrap";
+import axios from "axios";
 import "./Register.css";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import React, {SyntheticEvent, useState} from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import { applyInitialState } from "@mui/x-data-grid/hooks/features/columns/gridColumnsUtils";
 
 const Register = () => {
     //this is how we handle states in react,name:is variable, setName:is natural function that change name variable.
-    const [name, setName] = useState(''); 
-    const [email, setEmail] = useState(''); 
-    const [password, setPassword] = useState(''); 
+    const [input, setInput] = useState({});
 
-    const submit = (e) =>{
-        console.log({
-            name,
-            email,
-            password
-        })
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setInput({ ...input, [name]: value });
+      };
+
+
+    const submit = (e) => {
+        e.preventDefault()
+        axios.post("https://localhost:7056/api/Authenticate/register/",
+            {
+                ...input
+            });
+        console.log(input);
     }
     return (
-        <form onSubmit ={submit}>
         <div className="bg-white user-register">
-            
-        <Header/>
+
+            <Header />
             <Container>
                 <Row className="justify-content-center">
                     <Col xl={5}>
-                        <Form action="/Register" >
-                            <h4 className="text-center mb-4">Register</h4>
-                            <Form.Group className="mb-3" controlId="formBasicName">
-                                <Form.Label>Name</Form.Label> 
-                                <Form.Control type="text" required onChange={e => setName(e.target.value)}/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>E-Mail Address</Form.Label>
-                                <Form.Control type="email" required onChange={e => setEmail(e.target.value)}/>
+                        <Form onSubmit={submit}>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="name"
+                                    placeholder="Name"
+                                    required
+                                    onChange={handleChange}
+                                />
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Group className="mb-3">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="email"
+                                    placeholder="Enter Email"
+                                    required
+                                    onChange={handleChange}
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="" required onChange={e => setPassword(e.target.value)} />
+                                <Form.Control
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    required
+                                    onChange={handleChange}
+                                />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Remember Me" />
-                            </Form.Group>
-                            <Button type="submit" className="main-btn">
-                                Submit
+
+                            <Button
+                                type="submit"
+                                id="loginBtn"
+                                className="btn btn-primary btn-block loginBtn"
+                            >
+                                Register
                             </Button>
                         </Form>
                     </Col>
                 </Row>
 
             </Container>
-            <Footer/>
+            <Footer />
         </div>
-        </form>
     );
 };
 

@@ -9,7 +9,7 @@ function News() {
     const [newsList, fetchNewsList] = useState([]);
 
     const getData = () => {
-        fetch('http://localhost:5296/api/News')
+        fetch('http://localhost:7056/api/News')
             .then((res) => res.json())
             .then((res) => {
                 fetchNewsList(res)

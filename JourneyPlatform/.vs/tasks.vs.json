@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-JourneyPlatform.csproj",
+      "appliesTo": "JourneyPlatform.csproj.user",
+      "type": "launch"
+    }
+  ]
+}

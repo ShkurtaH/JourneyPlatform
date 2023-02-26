@@ -22,10 +22,10 @@ export default function NavigationList(props) {
     const [message, setMessage] = useState(false);
 
 
-    const URI = 'http://localhost:5296/api/Navigation'
+    const URI = 'http://localhost:7056/api/Navigation'
 
     const getData = () => {
-        fetch('http://localhost:5296/api/Navigation')
+        fetch('http://localhost:7056/api/Navigation')
             .then((res) => res.json())
             .then((res) => {
                 fetchNavLinks(res)
@@ -40,7 +40,7 @@ export default function NavigationList(props) {
 
     const postDelete = (id, e) => {
         e.preventDefault();
-        axios.delete(`http://localhost:5296/api/Navigation/${id}`)
+        axios.delete(`http://localhost:7056/api/Navigation/${id}`)
             .then(
                 res => console.log('tets')
             ).catch(err => console.log(err))

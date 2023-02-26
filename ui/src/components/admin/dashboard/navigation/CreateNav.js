@@ -11,7 +11,7 @@ export default function CreateNav(props) {
     const [title, setTitle] = useState('');
     const [link, setLink] = useState('');
     const [featuredImage, setFeaturedImage] = useState('');
-    const baseURL = "http://localhost:5296/api/Navigation";
+    const baseURL = "http://localhost:7056/api/Navigation";
 
 
     function onCreateNav(e) {

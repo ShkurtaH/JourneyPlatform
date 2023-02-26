@@ -13,7 +13,6 @@ namespace JourneyPlatform.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class NavigationController : ControllerBase
     {
         private readonly DataContext _context;

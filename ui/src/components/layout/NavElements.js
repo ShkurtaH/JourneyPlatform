@@ -1,19 +1,18 @@
 import { Navbar, Container, Nav, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 import { BoxArrowInRight } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import logo from '../../logo_transparent.png';
 
 
 function NavElements() {
-    const [navList, fetchNavLinks] = useState([]);
+    const [navList, setNavList] = useState([]);
 
     const getData = () => {
-        fetch('http://localhost:5056/api/Navigation')
-            .then((res) => res.json())
+        axios.get('https://localhost:7056/api/Navigation')
             .then((res) => {
-                fetchNavLinks(res)
+                setNavList(res.data);
             }).catch((error) => console.log('error', error))
     }
     useEffect(() => {
@@ -30,7 +29,7 @@ function NavElements() {
                     <Nav className="ms-auto">
                         {navList.map(item => {
                             return (
-                                <Link to={item.Link} className="nav-link" key={item.NavigationID}>{item.Title}</Link>
+                                <Link to={item.link} className="nav-link" key={item.id}>{item.title}</Link>
                             );
                         })}
                     </Nav>

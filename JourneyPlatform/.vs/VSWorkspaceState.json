@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Auth",
     "\\Controllers",
-    "\\Data",
-    "\\DataTransferObjects",
-    "\\Helpers",
     "\\Migrations",
     "\\Models",
     "\\Properties",
     "\\Repositories"
   ],
-  "SelectedNode": "\\Auth\\AuthenticateController.cs",
+  "SelectedNode": "\\Controllers\\DashboardController.cs",
   "PreviewInSolutionExplorer": false
 }

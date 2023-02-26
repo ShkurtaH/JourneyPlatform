@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Form, FormGroup } from 'react-bootstrap';
 import Button from '@mui/material/Button';
-const baseURL = "http://localhost:5296/api/Navigation";
+const baseURL = "http://localhost:7056/api/Navigation";
 
 
 export default function CreateNews(props) {
